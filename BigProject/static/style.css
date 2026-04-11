@@ -1,0 +1,61 @@
+
+
+body{
+    font-family: Arial, sans-serif;
+    background:#eef6ff;
+    margin:0;
+    padding:40px;
+}
+
+h1,h2{
+    color:#2c3e50;
+}
+
+table{
+    border-collapse: collapse;
+    width:100%;
+    background:white;
+}
+
+th{
+    background:#4da6ff;
+    color:white;
+}
+
+th,td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+button{
+    padding:6px 12px;
+    border:none;
+    background:#4da6ff;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3399ff;
+}
+
+input{
+    padding:8px;
+    width:250px;
+}
+
+a{
+    text-decoration:none;
+    color:#4da6ff;
+    font-weight:bold;
+}
+
+
+.delete-btn{
+    background:#ff4d4d;
+}
+
+.delete-btn:hover{
+    background:#8a1717;
+}
