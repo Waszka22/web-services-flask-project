@@ -1,5 +1,5 @@
 
-
+/* Page background and main layout */
 body{
     font-family: Arial, sans-serif;
     background:#eef6ff;
@@ -7,10 +7,12 @@ body{
     padding:40px;
 }
 
+/* Headings */
 h1,h2{
     color:#2c3e50;
 }
 
+/* Table styl */
 table{
     border-collapse: collapse;
     width:100%;
@@ -28,6 +30,7 @@ th,td{
     text-align:center;
 }
 
+/* Buttons */
 button{
     padding:6px 12px;
     border:none;
@@ -45,17 +48,33 @@ input{
     width:250px;
 }
 
-a{
+{
     text-decoration:none;
     color:#4da6ff;
     font-weight:bold;
 }
 
-
+/* Delete button */
 .delete-btn{
     background:#ff4d4d;
 }
 
 .delete-btn:hover{
     background:#8a1717;
+}
+
+/* Header style */
+.app-header{
+    background:#46a7df;
+    color:white;
+    padding:15px 20px;
+    border-radius:8px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+
+/* Background style */
+tr:hover{
+    background:#e8f2ff;
 }
