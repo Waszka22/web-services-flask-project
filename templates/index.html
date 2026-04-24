@@ -1,0 +1,125 @@
+
+<!--
+Main homepage for the Employee Management System.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon"></div>
+            <div>
+                <h2>EMS</h2>
+                <p>Hospitality Staff System</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/employees">Employees</a>
+            <a href="/add">Add Employee</a>
+        </div>
+    </nav>
+
+    <main class="page">
+
+        <section class="hero">
+            <div>
+                <h1>Manage staff, shifts and payroll</h1>
+                <p class="hero-text">
+                    A simple hospitality management system for employee records
+                    and payroll support.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="/employees" class="btn dark">View Employees</a>
+                    <a href="/add" class="btn light">Add Employee</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <h3>Staff overview</h3>
+              
+                <div class="mini-row">
+                    <span>Employees</span>
+                    <strong>2</strong>
+                </div>
+                <div class="mini-row">
+                    <span>Shifts</span>
+                    <strong>...</strong>
+                </div>
+                <div class="mini-row">
+                    <span>Payroll</span>
+                    <strong>€...</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-icon blue"></span>
+                <div>
+                    <p>Total Employees</p>
+                    <h2>2</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon green"></span>
+                <div>
+                    <p>Today’s Shifts</p>
+                    <h2>8</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon purple"></span>
+                <div>
+                    <p>Weekly Payroll</p>
+                    <h2>€4,850</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <h2>Staff Management</h2>
+                    <p>Choose an option below to manage your hospitality team.</p>
+                </div>
+            </div>
+
+            <div class="action-grid">
+                <a href="/add" class="action-card">
+                    <span class="action-icon"></span>
+                    <div>
+                        <h3>Add Employee</h3>
+                        <p>Create a new employee record.</p>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="/employees" class="action-card">
+                    <span class="action-icon"></span>
+                    <div>
+                        <h3>View Employees</h3>
+                        <p>Browse, search and edit staff.</p>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

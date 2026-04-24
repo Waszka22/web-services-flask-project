@@ -1,0 +1,426 @@
+
+/* Page background and main layout */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef6ff, #d7ebff);
+    margin: 0;
+    padding: 40px;
+    color: #2c3e50;
+}
+
+/* Headings */
+h1,h2{
+    color:#2c3e50;
+}
+
+/* Table styl */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+th{
+    background:#18497b;
+    color:white;
+}
+
+th,td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+/* Buttons */
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #3e91e4;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #3399ff;
+    transform: translateY(-1px);
+}
+
+input{
+    padding:8px;
+    width:250px;
+}
+
+{
+    text-decoration:none;
+    color:#4da6ff;
+    font-weight:bold;
+}
+
+/* Delete button */
+.delete-btn{
+    background:#d26d6d;
+}
+
+.delete-btn:hover{
+    background:#8a1717;
+}
+
+/* Header style */
+.app-header{
+    background:#46a7df;
+    color:white;
+    padding:15px 20px;
+    border-radius:8px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+
+/* Background style */
+tr:hover{
+    background:#e8f2ff;
+}
+
+/* Card style */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.card button {
+    margin: 10px;
+    min-width: 160px;
+}
+
+/* Homepage style */
+
+body {
+    background: #f3f7fb;
+    padding: 0;
+    margin: 0;
+    color: #0f2440;
+}
+
+.navbar {
+    background: #0b2a4a;
+    color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    background: #1f5fae;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+}
+
+.brand h2 {
+    margin: 0;
+    color: white;
+}
+
+.brand p {
+    margin: 2px 0 0;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: #93c5fd;
+}
+
+.page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 30px 24px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1d4f91, #0d3262);
+    color: white;
+    border-radius: 18px;
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(15, 36, 64, 0.18);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #bfdbfe;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2.8rem;
+    max-width: 650px;
+    margin: 10px 0;
+    line-height: 1.15;
+}
+
+.hero-text {
+    max-width: 560px;
+    font-size: 1.1rem;
+    color: #dbeafe;
+}
+
+.hero-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 14px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn.dark {
+    background: #061b33;
+    color: white;
+}
+
+.btn.light {
+    background: white;
+    color: #0b2a4a;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding: 24px;
+    min-width: 260px;
+    backdrop-filter: blur(8px);
+}
+
+.hero-card h3 {
+    margin: 0;
+    color: white;
+}
+
+.hero-card p {
+    color: #dbeafe;
+    margin-bottom: 18px;
+}
+
+.mini-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 28px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 8px 22px rgba(15, 36, 64, 0.08);
+}
+
+.stat-card p {
+    margin: 0;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.stat-card h2 {
+    margin: 4px 0 0;
+    color: #0b2a4a;
+    font-size: 1.8rem;
+}
+
+.stat-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stat-icon.blue {
+    background: #dbeafe;
+}
+
+.stat-icon.green {
+    background: #dcfce7;
+}
+
+.stat-icon.purple {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.panel {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 22px rgba(15, 36, 64, 0.08);
+}
+
+.panel h2 {
+    margin: 0;
+    color: #0b2a4a;
+}
+
+.panel p {
+    color: #64748b;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.action-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 22px;
+    text-decoration: none;
+    color: #0f2440;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: 0.25s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(15, 36, 64, 0.12);
+    border-color: #60a5fa;
+}
+
+.action-icon {
+    width: 52px;
+    height: 52px;
+    background: #eff6ff;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+}
+
+.action-card h3 {
+    margin: 0;
+    color: #112f4d;
+}
+
+.action-card p {
+    margin: 4px 0 0;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 1.6rem;
+    color: #64748b;
+}
+
+@media (max-width: 800px) {
+    .navbar,
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        margin-right: 16px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .stats-grid,
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+.table-container {
+    margin-top: 24px;
+    overflow-x: auto;
+}
+
+.panel {
+    margin-bottom: 28px;
+}
+
+.edit-panel {
+    max-width: 520px;
+}
+
+.edit-panel input {
+    margin-top: 8px;
+}
+
+
+
+
+/* References:
+- W3Schools Responsive Design: https://www.w3schools.com/Css/css3_colors.asp
+- W3Schools Top Navigation Bar https://www.w3schools.com/howto/howto_js_topnav.asp
+*/
