@@ -9,11 +9,14 @@ Main homepage for the Employee Management System.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Management System</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="brand">
             <div class="brand-icon"></div>
@@ -32,12 +35,13 @@ Main homepage for the Employee Management System.
 
     <main class="page">
 
+        <!-- Hero -->
         <section class="hero">
             <div>
                 <h1>Manage staff, shifts and payroll</h1>
                 <p class="hero-text">
                     A simple hospitality management system for employee records
-                    and payroll support.
+                    and payroll support
                 </p>
 
                 <div class="hero-actions">
@@ -46,17 +50,20 @@ Main homepage for the Employee Management System.
                 </div>
             </div>
 
+            <!-- Panel Right -->
             <div class="hero-card">
                 <h3>Staff overview</h3>
-              
+
                 <div class="mini-row">
                     <span>Employees</span>
-                    <strong>2</strong>
+                    <strong id="employeeCountSmall">0</strong>
                 </div>
+
                 <div class="mini-row">
                     <span>Shifts</span>
-                    <strong>...</strong>
+                    <strong id="shiftCountSmall">0</strong>
                 </div>
+
                 <div class="mini-row">
                     <span>Payroll</span>
                     <strong>€...</strong>
@@ -64,46 +71,50 @@ Main homepage for the Employee Management System.
             </div>
         </section>
 
+        <!-- Starts -->
         <section class="stats-grid">
+
             <div class="stat-card">
                 <span class="stat-icon blue"></span>
                 <div>
                     <p>Total Employees</p>
-                    <h2>2</h2>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <span class="stat-icon green"></span>
-                <div>
-                    <p>Today’s Shifts</p>
-                    <h2>8</h2>
+                    <h2 id="employeeCount">0</h2>
                 </div>
             </div>
 
             <div class="stat-card">
                 <span class="stat-icon purple"></span>
                 <div>
+                    <p>Today’s Shifts</p>
+                    <h2 id="shiftCount">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon green"></span>
+                <div>
                     <p>Weekly Payroll</p>
                     <h2>€4,850</h2>
                 </div>
             </div>
+
         </section>
 
+        <!-- Acation -->
         <section class="panel">
             <div class="panel-header">
                 <div>
                     <h2>Staff Management</h2>
-                    <p>Choose an option below to manage your hospitality team.</p>
                 </div>
             </div>
 
             <div class="action-grid">
+
                 <a href="/add" class="action-card">
                     <span class="action-icon"></span>
                     <div>
                         <h3>Add Employee</h3>
-                        <p>Create a new employee record.</p>
+                        <p>Create a new employee record</p>
                     </div>
                     <span class="arrow">→</span>
                 </a>
@@ -112,14 +123,50 @@ Main homepage for the Employee Management System.
                     <span class="action-icon"></span>
                     <div>
                         <h3>View Employees</h3>
-                        <p>Browse, search and edit staff.</p>
+                        <p>Search and edit staff</p>
                     </div>
                     <span class="arrow">→</span>
                 </a>
+
+                <a href="/shifts" class="action-card">
+                    <span class="action-icon"></span>
+                    <div>
+                        <h3>View Shifts</h3>
+                        <p>Manage staff shifts</p>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
             </div>
         </section>
 
     </main>
+
+    <!-- Adding function-->
+    <script>
+        async function loadDashboardCounts() {
+            try {
+                const empRes = await fetch("/api/employees");
+                const employees = await empRes.json();
+
+                const shiftRes = await fetch("/api/shifts");
+                const shifts = await shiftRes.json();
+
+                // duże liczby
+                document.getElementById("employeeCount").textContent = employees.length;
+                document.getElementById("shiftCount").textContent = shifts.length;
+
+                // małe w hero
+                document.getElementById("employeeCountSmall").textContent = employees.length;
+                document.getElementById("shiftCountSmall").textContent = shifts.length;
+
+            } catch (err) {
+                console.error("Error loading data:", err);
+            }
+        }
+
+        loadDashboardCounts();
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,112 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shifts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="brand">
+        <h2>EMS</h2>
+        <p>Hospitality Staff System</p>
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/employees">Employees</a>
+    </div>
+</nav>
+
+<main class="page">
+
+    <section class="panel">
+        <h2>Shifts List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Employee</th>
+                    <th>Date</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody id="shiftTable"></tbody>
+        </table>
+    </section>
+
+    <section class="panel edit-panel">
+        <h2>Add Shift</h2>
+
+        <input id="emp" placeholder="Employee"><br><br>
+        <input id="date" placeholder="Date"><br><br>
+        <input id="start" placeholder="Start"><br><br>
+        <input id="end" placeholder="End"><br><br>
+        <input id="role" placeholder="Role"><br><br>
+
+        <button onclick="addShift()">Add Shift</button>
+    </section>
+
+</main>
+
+<script>
+    async function loadShifts() {
+        const res = await fetch("/api/shifts");
+        const shifts = await res.json();
+
+        const table = document.getElementById("shiftTable");
+        table.innerHTML = "";
+
+        shifts.forEach(s => {
+            table.innerHTML += `
+                <tr>
+                    <td>${s.id}</td>
+                    <td>${s.employee_name}</td>
+                    <td>${s.shift_date}</td>
+                    <td>${s.start_time}</td>
+                    <td>${s.end_time}</td>
+                    <td>${s.role}</td>
+                </tr>
+            `;
+        });
+    }
+
+    async function addShift() {
+        const shift = {
+            employee_name: document.getElementById("emp").value,
+            shift_date: document.getElementById("date").value,
+            start_time: document.getElementById("start").value,
+            end_time: document.getElementById("end").value,
+            role: document.getElementById("role").value
+        };
+
+        await fetch("/api/shifts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(shift)
+        });
+
+        document.getElementById("emp").value = "";
+        document.getElementById("date").value = "";
+        document.getElementById("start").value = "";
+        document.getElementById("end").value = "";
+        document.getElementById("role").value = "";
+
+        loadShifts();
+    }
+
+    loadShifts();
+</script>
+
+</body>
+</html>
