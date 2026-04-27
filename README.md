@@ -24,16 +24,16 @@ This repository contains the submission for the **Web Services and Applications*
 
 ### Employees
 
-- GET /api/employees - Get all employees  
-- GET /api/employees/<id> - Get specific employee  
-- POST /api/employees - Add new employee  
-- PUT /api/employees/<id> - Update employee  
-- DELETE /api/employees/<id> - Delete employee  
+- `GET /api/employees` - Get all employees  
+- `GET /api/employees/<id>` - Get specific employee  
+- `POST /api/employees` - Add new employee  
+- `PUT /api/employees/<id>` - Update employee  
+- `DELETE /api/employees/<id>` - Delete employee  
 
 ### Shifts
 
-- GET /api/shifts - Get all shifts  
-- POST /api/shifts - Add new shift  
+- `GET /api/shifts` - Get all shifts  
+- `POST /api/shifts` - Add new shift  
 
 
 ## Project Structure
