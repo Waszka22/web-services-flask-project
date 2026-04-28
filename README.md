@@ -103,4 +103,3 @@ Follow these steps to run the project locally.
 - Python Flask Flashing: https://pythongeeks.org/learn-python-tutorial/
 - W3Schools Tutorials: https://www.w3schools.com/
 - SQLAlchemy Documentation: https://docs.sqlalchemy.org/
-- AI Assistance: ChatGPT (code structure and UI guidance)

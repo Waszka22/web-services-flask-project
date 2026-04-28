@@ -38,10 +38,12 @@ button {
     padding: 8px 14px;
     border: none;
     border-radius: 6px;
-    background: #3e91e4;
+    background: #284bd9;
     color: white;
     cursor: pointer;
     font-weight: bold;
+
+    transition: all 0.25s ease;
 }
 
 button:hover {
