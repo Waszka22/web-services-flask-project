@@ -96,10 +96,10 @@ Follow these steps to run the project locally.
 
 
 ## References
-- DAO Pattern Example (used as reference):https://github.com/andrewbeattycourseware/    
-  wsaa-courseware/blob/main/code/    Topic08-generated-client/bookDAO.py
-- Flask Documentation: https://flask.palletsprojects.com/
-- Flask https://pypi.org/project/Flask-Login/
-- Python Flask Flashing: https://pythongeeks.org/learn-python-tutorial/
-- W3Schools Tutorials: https://www.w3schools.com/
-- SQLAlchemy Documentation: https://docs.sqlalchemy.org/
+
+- DAO Pattern Example: [GitHub Repository](https://github.com/andrewbeattycourseware/wsaa-courseware/blob/main/code/Topic08-generated-client/bookDAO.py)
+- Flask Documentation: [Flask Docs](https://flask.palletsprojects.com/)
+- Flask-Login: [PyPI Flask-Login](https://pypi.org/project/Flask-Login/)
+- Python Flask Flashing: [PythonGeeks](https://pythongeeks.org/learn-python-tutorial/)
+- W3Schools Tutorials: [W3Schools](https://www.w3schools.com/)
+- SQLAlchemy Documentation: [SQLAlchemy Docs](https://docs.sqlalchemy.org/)
