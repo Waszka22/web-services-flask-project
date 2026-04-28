@@ -1,3 +1,7 @@
+"""
+Employee Management System 
+Flask application providing REST API for managing employees and shifts.
+"""
 
 from flask import Flask, jsonify, request, render_template
 from flask_sqlalchemy import SQLAlchemy
@@ -5,7 +9,7 @@ import os
 
 app = Flask(__name__)
 
-# database config
+# Database config
 base_dir = os.path.abspath(os.path.dirname(__file__))
 db_file = os.path.join(base_dir, "employees.db")
 
@@ -15,7 +19,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
 
-# model
+# Model
 class Employee(db.Model):
     id = db.Column(db.Integer, primary_key=True) # primary key
     first_name = db.Column(db.String(100))
@@ -53,7 +57,7 @@ class Shift(db.Model):
             "end_time": self.end_time,
             "role": self.role
         }
-# pages
+# Pages
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -196,12 +200,6 @@ def delete_employee(id):
 
     return jsonify({"message": "Employee deleted"})
 
-
-if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
-
-    app.run(debug=True)
     
 @app.route("/api/shifts/<int:id>", methods=["DELETE"])
 def delete_shift(id):
@@ -214,3 +212,11 @@ def delete_shift(id):
     db.session.commit()
 
     return jsonify({"message": "Shift deleted"})
+
+# Run app
+
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+
+    app.run(debug=True)
