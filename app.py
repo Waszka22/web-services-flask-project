@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 
 # model
 class Employee(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True) # primary key
     first_name = db.Column(db.String(100))
     last_name = db.Column(db.String(100))
     position = db.Column(db.String(100))
